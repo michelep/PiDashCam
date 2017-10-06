@@ -1,6 +1,8 @@
 # PiDashCam
 Raspberry Pi Zero W dash camera for your auto
 
+!!! PLEASE NOTE: CODE IS NOT READY YET !!!
+
 ## BoM - Bill of Materials
 
 * [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
