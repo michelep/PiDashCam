@@ -26,3 +26,11 @@ Soldering iron, board, wires and all other stuff needed to build a simple circui
 ![Overview](assets/asset_3.jpg "Overview")
 
 ![Overview](assets/asset_4.jpg "Prototype wiring")
+
+## Author
+
+PiDashCam was made by Michele <o-zone@zerozone.it> Pinassi
+
+## License
+
+PiDashCam is under MIT license. No any warranty. Please use responsibly.
