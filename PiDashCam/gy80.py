@@ -167,6 +167,7 @@ class GY80(object):
 
 class GY80Poller(threading.Thread):
   def __init__(self):
+    Config.log.debug('[INIT] GY80 thread')
     threading.Thread.__init__(self)
     Config.gy80 =  GY80()
     x, y, z = Config.gy80.read_accel()

@@ -18,13 +18,13 @@ VIDEO_WIDTH = 1280
 class Camera(threading.Thread):
     def __init__(self):
 	threading.Thread.__init__(self)
+	Config.log.debug('[INIT] Camera thread')
 	self.camera = picamera.PiCamera()
 	self.camera.resolution = (VIDEO_WIDTH, VIDEO_HEIGHT)
         self.camera.framerate = 30
 	self.stream = picamera.PiCameraCircularIO(self.camera, seconds=20)
 	self.camera.start_recording(self.stream, format='h264')
 	self.running = True
-	Config.log.debug('Start recording video')
 
     def write_video(self):
 	Config.log.debug('Writing video to disk')
@@ -35,8 +35,8 @@ class Camera(threading.Thread):
             	    self.stream.seek(frame.position)
             	    break
     	    # Write the rest of the stream to disk
-    	    with io.open('./cap/motion.h264', 'wb') as output:
-        	output.write(self.stream.read())
+#    	    with io.open('./cap/motion.h264', 'wb') as output:
+#        	output.write(self.stream.read())
 
     def exit(self):
     	self.camera.stop_recording()

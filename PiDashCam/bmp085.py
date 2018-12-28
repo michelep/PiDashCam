@@ -116,6 +116,7 @@ class BMP085(object):
         
 class BMP085Poller(threading.Thread):
   def __init__(self):
+    Config.log.debug('[INIT] BMP085 thread')
     threading.Thread.__init__(self)
     bus = smbus.SMBus(1)
     Config.bmp085 = BMP085(bus, 0x77 , "BMP085")

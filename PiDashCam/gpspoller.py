@@ -11,6 +11,7 @@ from config import Config
  
 class GpsPoller(threading.Thread):
   def __init__(self):
+    Config.log.debug('[INIT] GPS thread')
     threading.Thread.__init__(self)
     Config.gpsd = gps(mode=WATCH_ENABLE) #starting the stream of info
     self.current_value = None
